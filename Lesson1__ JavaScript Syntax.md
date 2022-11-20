@@ -1,4 +1,21 @@
-#JavaScript Syntax
+<!-- TABLE OF CONTENTS -->
+
+### Table of Contents
+
+- [JavaScript Syntax](#javascript-syntax)
+- [JavaScript Expressions](#javascript-expressions)
+- [JavaScript Statement](#javascript-statement)
+  - [Semicolons](#semicolons)
+  - [White Space](#white-space)
+  - [JavaScript Block](#javascript-block)
+  - [Keywords and Reserved works](#keywords-and-reserved-works)
+  - [Comments](#comments)
+  - [JavaScript Identifiers or Names](#javascript-identifiers-or-names)
+  - [JavaScript Line Length and Line Breaks](#javascript-line-length-and-line-breaks)
+  - [JavaScript Code Structure](#javascript-code-structure)
+- [Statement vs Expression](#statement-vs-expression)
+
+# JavaScript Syntax
 
 **JavaScript syntax** is the set of rules how JavaScript programs are constructed.
 => JavaScript syntax নিয়মের সেটকে বুঝায়, যা জাভাস্ক্রিপ্ট প্রোগ্রামগুলো কিভাবে তৈরি তা নির্ধারণ করে।
@@ -7,6 +24,17 @@ JavaScript syntax defines two types of value.
 
 1. Fixed values (Fixed values are called **literals** like: numbers, strings)
 2. Variable values (variable values are called variables [var, let, const]
+
+### JavaScript Expressions
+
+An expression is a combination of values, variables, and operators, which computes to a value.
+
+The computation is called an evaluation.
+
+```JavaScript
+ 5 * 10
+ "John" + " " + "Doe"
+```
 
 ## JavaScript Statement
 
@@ -46,7 +74,7 @@ function sum(){
 }
 ```
 
-### keywords and Reserved works
+### Keywords and Reserved works
 
 JavaScript defines a list of reserved keywords that have specific uses. Therefore, you cannot use the reserved keywords as identifiers or property names by rules.
 
@@ -58,17 +86,6 @@ In addition to the reserved keywords, ECMA-252 also define a list of future rese
 
 `enum` `implements` `let` `protected` `private` `public` `await` `interface` `package` `implements` `public`
 
-### JavaScript Expressions
-
-An expression is a combination of values, variables, and operators, which computes to a value.
-
-The computation is called an evaluation.
-
-```JavaScript
- 5 * 10
- "John" + " " + "Doe"
-```
-
 ### Comments
 
 - code after double slashes `//` or between `/*` and `*/` is treated as a comment.
@@ -79,7 +96,7 @@ var a = 5;  // It will be executed
  // var a = 5;  // It will not be executed
 ```
 
-### JavaScript Identifiers / Names
+### JavaScript Identifiers or Names
 
 Identifiers are JavaScript names.
 
@@ -121,3 +138,61 @@ console.log(👉"Hello"👈);👈
 console.log(👉'Hello'👈);👈
 
 \*Quotation and Semicolon.
+
+# Statement vs Expression
+
+**এপ্রেশন:** সহজ কথায় বললে, জাভাস্ক্রিপ্টের কোনো কোড যদি ভ্যালু প্রডিউস করে তাহলে সেটা এপ্রেশন।
+যেমন:
+
+- 5 → produces 5
+- "hello → produces hello
+- undefined → produces undefined
+- result === true ? "correct" : "wrong"
+  num > 100 → produces either true or false
+  isHappy ? "🙂" : "🙁" → produces an emoji
+  [1, 2, 3].pop() → produces the number 3
+  একটা এক্সপ্রেশন এর মধ্যে ও এক্সপ্রেশন থাকতে পারে।
+
+যেমন: (5 + 1) \* 2 এইটা একটা এক্সপ্রেশন তাই না ?
+
+এই এক্সপ্রেশন এর মধ্যে মোট কয়টা এক্সপ্রেশন আছে?
+
+উত্তর: মোট 5 টা।
+
+কিভাবে?
+
+1. (5 + 1) \* 2 পুরোটা একটা এক্সপ্রেশন।
+2. (5 + 1) এইটা একটা এক্সপ্রেশন।
+3. 5 একটা এক্সপ্রেশন।
+4. 1 একটা এক্সপ্রেশন।
+5. 2 একটা এক্সপ্রেশন।
+
+**স্টেটমেন্ট:** একটা প্রোগ্রামের মাধ্যমে আমরা কম্পিউটারকে কিছু নির্দেশনা(statement) দিয়ে থাকি যা সে এক্সিকিউট করে থাকে। প্রোগ্রামিং ল্যাঙ্গুয়েজে এই নির্দেশনাগুলোকেই স্টেটমেন্ট বলে। একটা জাভাস্ক্রিপ্ট প্রোগ্রাম ও কিছু লিস্ট অফ প্রোগ্রামিং স্টেটমেন্ট এর সমন্বয়। যেমন:
+
+`var num = 100`
+
+```javascirpt
+if (hi > 10) {
+  // More statements here
+}
+```
+
+```javascirpt
+throw new Error('Something exploded!');
+```
+
+স্টেটমেন্ট এর মধ্যে কিছু জায়গায় আমরা এক্সপ্রেশন লিখে থাকি। যেমনঃ
+
+```javascirpt
+// Statement 1:
+let hi = /* expression slot */;
+
+// Statement 2:
+return /* expression slot */;
+
+// Statement 3:
+if (/* expression slot */) { }
+
+```
+
+সর্বশেষ যদি আবার একবার একথায় বুঝতে চাই তাহলে, এক্সপ্রেশন হল যদি কোন জাভাস্কিপ্ট কোড অথবা কোড এর অংশ আমাদেরকে কোনো ভ্যালু প্রডিউস করে তাহলে সেটা এক্সপ্রেশন এবং স্টেটমেন্ট হল একটা নির্দেশনা। একটা স্টেটমেন্ট এর মধ্যে ও এক্সপ্রেশন থাকতে পারে। [source](https://boolean.hashnode.dev/statement-vs-expression-in-javascript)
