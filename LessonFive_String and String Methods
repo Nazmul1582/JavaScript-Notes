@@ -1,0 +1,230 @@
+### Table of Contents
+
+- [JavaScript String](#javascript-string)
+  - [Escape Character](#escape-character)
+  - [JavaScript Strings as Object](#javascript-strings-as-objects)
+- [String Methods](#string-methods)
+
+# JavaScript String
+
+- JavaScript strings are for storing and manipulating text.
+- A JavaScript string is zero or more characters written inside quotes.
+
+```javascript
+let text = "Nazmul";
+let str = "50";
+let str2 = "";
+```
+
+```javascript
+let str = 10 + "";
+console.log(str); // 10
+console.log(typeof str); // string
+
+// or
+let num = 10;
+console.log(num.toString());
+```
+
+```javascript
+// string.length => show the length of string;
+text.length; // 6
+str.length; // 2
+str2.length; // 0
+```
+
+## Escape Character
+
+Because strings must be written within quotes, JavaScript will misunderstand this string:
+
+```javascript
+// let str = "This is a \"String\" ";
+// console.log(str);    // output: This is a "String"
+
+let str2 = "JavaScript is a \n Programming Language";
+console.log(str2);
+// output: JavaScript is a
+// Programming Language
+```
+
+| Code | Result | Description          |
+| ---- | ------ | -------------------- |
+| \'   | '      | Single quote         |
+| \"   | "      | Double quote         |
+| \\   | \      | Backslash            |
+| \b   |        | Backspace            |
+| \f   |        | Form Feed            |
+| \n   |        | New Line             |
+| \r   |        | Carriage Return      |
+| \t   |        | Horizontal Tabulator |
+| \v   |        | Vertical Tabulator   |
+
+## JavaScript Strings as Objects
+
+Normally, JavaScript strings are primitive values, created from literals:
+
+```javascript
+let x = "string";
+```
+
+But strings can also be defined as objects with the keyword `new`:
+
+```javascript
+let y = new String("string");
+```
+
+- Do not create Strings objects.
+
+- The new keyword complicates the code and slows down execution speed.
+
+- String objects can produce unexpected results:
+
+When using the == operator, x and y are equal:
+
+```javascript
+let x = "John";
+let y = new String("John");
+```
+
+When using the === operator, x and y are not equal:
+
+```javascript
+let x = "John";
+let y = new String("John");
+```
+
+Comparing two JavaScript objects always returns false.
+
+```javascript
+let x = new String("John");
+let y = new String("John");
+console.log(x == y); // false
+```
+
+```javascript
+let x = new String("John");
+let y = new String("John");
+console.log(x === y); // =>  false
+```
+
+# String Methods
+
+## JavaScript String Length
+
+The length property returns the length of a string:
+
+```javascript
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let length = text.length; // output: 26;
+```
+
+## Extracting String Parts
+
+There are 3 methods for extracting a part of a string:
+
+- slice(+/-start, +/-end)
+- substring(+start, +end)
+- substr(+/-start, length)
+
+## JavaScript String slice()
+
+```javascript
+let str = "Bangla";
+str.slice(2); // output: ngla
+str.slice(-4); // Ban
+str.slice(3, 2); // g
+```
+
+```javascript
+
+```
+
+```javascript
+
+```
+
+String length
+String slice()
+String substring()
+String substr()
+String replace()
+String replaceAll()
+String toUpperCase()
+String toLowerCase()
+String concat()
+String trim()
+String trimStart()
+String trimEnd()
+String padStart()
+String padEnd()
+String charAt()
+String charCodeAt()
+String split()
+
+<!--
+
+
+
+
+ -->
+
+<!-- ## 036. JS String | JS All You Need to Know
+
+```javascript
+// Chapter Five
+// String in Javascript
+
+// What is String?
+
+var n = 10;
+var str = String(n);
+console.log(str); // 10 => type: string
+```
+
+```javascript
+// **** Escape Notation
+
+var str = "This is a \\String";
+console.log(str); // This is a \String
+
+// ***** String Comparison ****** //
+
+// var a = 'aaaaaaZ'
+// var b = 'aaaaaaz'
+
+// console.log(a > b)
+
+// // console.log('a' > 'Z')
+
+// console.log('001' == 1)
+
+// var a = 'I am'
+// var b = 'Nazmul Hasan'
+
+// var c = a.concat(' ', b)
+// // var d = c.substr(5)
+// // console.log(d)
+// // console.log(c.charAt(0))
+// console.log(c.startsWith('I am'))
+// console.log(c.endsWith('Nay6556'))
+// console.log(a.toUpperCase())
+// console.log(b.toLowerCase())
+// console.log('     fsdsfsddsf     '.trim())
+// console.log(c.split(' '))
+
+var str = "Nazmul Hasan";
+
+var length = 0;
+
+while (true) {
+  if (str.charAt(length) == "") {
+    break;
+  } else {
+    length++;
+  }
+}
+
+console.log(length);
+console.log(str.length);
+console.log("somnetyhinfdssdfdsfdsfdsaf".length);
+``` -->
