@@ -15,7 +15,7 @@
 
 ## This Keyword
 
-- this keyword javascript এ আছে কেন? কি দরকার?
+- This keyword JavaScript এ আছে কেন? কি দরকার?
 
 - এটা একটা function কে different context এ reuse করতে help করে।
 
