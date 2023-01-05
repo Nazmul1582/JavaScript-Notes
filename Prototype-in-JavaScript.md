@@ -32,13 +32,13 @@ console.log(person);
 function Person(name, age) {
   const person = {};
   person.name = name;
-  (person.age = age),
-    (person.eat = function () {
+  person.age = age,
+    person.eat = function () {
       console.log(`${this.name} is eating`);
-    }),
-    (person.sleep = function () {
+    },
+    person.sleep = function () {
       console.log(`${this.name} is sleeping`);
-    });
+    };
   return person;
 }
 
