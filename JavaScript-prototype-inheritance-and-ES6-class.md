@@ -28,7 +28,7 @@ fuction Person(name, age) {
 	this.age = age;
 	this.eat = function(){
 		console.log(`${this.name} is eating.`)
-  }
+  	}
 }
 const sakib = new Person("Sakib", 35);
 const tamim  = new Person("Tamim", 36);
