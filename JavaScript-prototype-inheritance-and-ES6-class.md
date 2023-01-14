@@ -28,7 +28,7 @@ fuction Person(name, age) {
 	this.age = age;
 	this.eat = function(){
 		console.log(`${this.name} is eating.`)
-  	}
+  }
 }
 const sakib = new Person("Sakib", 35);
 const tamim  = new Person("Tamim", 36);
@@ -84,3 +84,23 @@ console.log(tamim);
 ## Summary of prototype
 
 `prototype` হচ্ছে সিম্পলি ফাংশনের একটা প্রপার্টি, জাভাস্ক্রিপ্টের। সেই প্রপার্টিটা কোন একটা অবজেক্টকে পয়েন্ট করে। সেই প্রপার্টির মধ্যে যা থাকবে, আমি যদি ওই ফাংশন থেকে কোন নতুন অবজেক্ট তৈরি করি তাহলে সেই অবজেক্টগুলো প্রটোটাইপের মধ্যে থাকা সব কিছু পেয়ে যাবে।
+
+## Inheritance and Class
+
+### Prototype Inheritance
+
+```javascript
+function Person(name, age) {
+	this.name = name;
+	this.age = age;
+}
+const sakib = new Person(“Sakib”, 35);
+```
+
+- Java তে আমরা একটা `class` তৈরি করি। সেই `class` থেকে আমরা `new ClassName()` এর মাধ্যমে অবজেক্ট তৈরি করি।
+- মানে জাভাতে যদি এই কোডটা লিখতাম তাহলে class Person: `new Person()` থাকতো, function Person না।
+  কিন্তু জাভাস্ক্রিপ্টে আমরা ফাংশন থেকে (আসলে ফাংশন থেকে না কনস্ট্রাক্টর থেকে) অবজেক্ট তৈরি করি।
+  তার মানে জাভাস্ক্রিপ্টে বাই ডিফল্ট every function is a constructor.
+  -কনভেনশন হচ্ছে: যখনই আমরা কোনো constructor ফাংশন explicitly বুঝাতে যাবো, তখন আমরা ক্যামেল কেইসে (Person) লিখব।
+- জাভাস্ক্রিপ্টের কাছে যেহেতু ফাংশনও একটা অবজেক্ট, তাই `new` কিওয়ার্ড বুঝতে পারে। নিউ আবজেক্ট করার মতই করছে সে আসলে। দেখতে অনেকটা ক্লাসের মতো দেখাচ্ছে।
+- জাভাস্ক্রিপ্ট যেটা করছে: ডাইরেক্ট এই কনস্ট্রাক্টর থেকে আমরা অবজেক্ট বানাতে পারছি। জাস্ট `new Person()`) কল করে দিচ্ছি। একদম বলতে গেলে এটা একটা constructor function.
