@@ -152,3 +152,51 @@ p.nazmul(); // I am Md. Nazmul Hasan
   জাভাস্ক্রিপ্টের সমস্ত অবজেক্ট আল্টিমেটলি মাস্টার অবজেক্ট থেকে আসে।
 
 **Inheritance:**
+```javascript
+function Person (name, age){
+  this.name: name;
+  this.age = age;
+}
+function Cricketer(type, country){
+  this.type = type;
+  this.country = country;
+}
+Person.prototype = {
+  eat = function(){
+    console.log(`${this.name} is eating`)
+  }
+}
+
+const sakib = new Person("Sakib", 35)
+```
+জাভাস্ক্রিপ্ট Person আর Cricketer এর মধ্যে  কোনো কানেকশন জানে না। তাই আমাদেরকে ম্যানুয়ালি এই দুইটার মধ্যে কানেকশন করে দিতে হবে যে, sakib আগে একজন Person তারপর সে একজন Cricketer. 
+মানে Person তার প্যারেন্ট ক্লাস হবে এবং Cricketer তার সাব-ক্লাস হবে।
+সেই কানেকশনটা আমরা কিভাবে তৈরি করব? সেটাই হচ্ছে inheritance. 
+এই কানেকশনটা তৈরি করার জন্য ফাস্টে যেটা করব:
+আমার উদ্দেশ্য হল, আমি কিন্তু new Person()  করব না, আমি new Cricketer() করব যেন সে Person() এর প্রোপারটিগুলো একবারে নিয়ে নেয়। এটাই হচ্ছে আসলে মেইন গোল। যেটা class based language এ হয়।
+
+এখন new Cricketer() করার আগে কানেকশন করানোর জন্য Cricketer() এর মধ্যে পার্সন কনস্ট্রাক্টর টা কে কল করে দিব, তাহলেই এই বিশিষ্ট গুলো চলে আসবে । আর এটা আমরা করব.  .call() ব্যবহার করে । 
+
+```javascript
+function Cricketer(type, country){
+	Person.call(this) // মানে পার্সোন এর মধ্যে ক্রিকেটার কে কল করে দেওয়া হলো। অর্থাৎ Cricketer কল হবে পারসন কনটেক্সটে। মানে এই this(Cricketer) টাকে পাঠিয়ে দিবে 
+  this.type = type;
+  this.country = country;
+}
+```
+
+Person.call(this) করার কারণে Person()  টা কল হয়ে যাবে। এবং this হিসেবে পাবে Cricketer() এর মধ্যে যে অবজেক্টটা সেইটাকে। এটা করা মানেই হচ্ছে আমার এই দুইটার মধ্যে একটা কানেকশন অটোমেটিক হয়ে গেল। 
+একটা কাজ করা কিন্তু আমাদের এখনো বাকি আছে। আর সেটা হচ্ছে: আমরা ক্রিকেটারের প্রভার্টিগুলোকে ইনহেরিট করে নিয়ে এসেছি কিন্তু এরপর প্রোটোটাইপের প্রপার্টিগুলোকে ইনহেরিট করিনি। সেটার জন্য আমরা Object.create() এর বিহেভিয়ারটা ব্যবহার করব। 
+Object.create() এর বিহেভিয়ার হল:
+```javascript
+const a = {  name: "Nazmul" }
+const p = Object.create(a)
+console.log(p.name) // Nazmul
+```
+এই বিহেবিয়রটা কাজে লাগিয়ে Person.prototype কে Cricketer এর প্রোটোপাইপের মধ্যে ইনহেরিট করে নিয়ে আসব। 
+```javascript
+Cricketer.prototype = Object.create(Person.prototype)  
+```
+
+
+
