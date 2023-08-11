@@ -160,9 +160,9 @@ console.log(msg); //error: can't access local variable
 | 1. Stored in global scope | ✔   | ❌  | ❌    |
 | 2. Function scope         | ✔   | ✔   | ✔     |
 | 3. Block scope            | ❌  | ✔   | ✔     |
-| 5. Can be reassigned?     | ✔   | ✔   | ❌    |
-| 6. Can be redeclared?     | ✔   | ❌  | ❌    |
-| 7. Can be hoistted?       | ✔   | ❌  | ❌    |
+| 4. Can be reassigned?     | ✔   | ✔   | ❌    |
+| 5. Can be redeclared?     | ✔   | ❌  | ❌    |
+| 6. Can be hoistted?       | ✔   | ❌  | ❌    |
 
 **_1.Stored in global scope_**
 
