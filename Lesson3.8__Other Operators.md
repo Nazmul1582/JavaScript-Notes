@@ -1,6 +1,6 @@
 ### Table of content
 
--[typeof](#typeof)
+-[typeof](#typeof) -[instanceof](#instanceof)
 
 # Few Important JavaScript Operators
 
@@ -48,4 +48,34 @@ typeof arr; // object
 
 let func = new Function(3 + 5);
 typeof func; // function
+```
+
+## instanceof
+
+The instanceof operator returns true if the specified object is of the specified object type. The syntax is:
+
+```javascript
+objectName instanceof objectType;
+```
+
+where objectName is the name of the object to compare to objectType, and objectType is an object type, such as Date or Array.
+
+```javascript
+let a = ["Apple", "Banana"];
+console.log(a instanceof Array); // true
+console.log(a instanceof Object); // true
+console.log(a instanceof Number); // false
+
+let b = { name: "Nazmul", age: 25 };
+console.log(b instanceof Object); // true
+console.log(b instanceof Array); // false
+
+let c = new Function(3 + 5);
+console.log(c instanceof Function); // true
+
+let str = new String(20);
+console.log(str instanceof String); // true
+
+let num = new Number("10");
+console.log(num instanceof Number); // false
 ```
