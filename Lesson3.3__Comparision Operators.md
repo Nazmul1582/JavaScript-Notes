@@ -1,5 +1,16 @@
 # Comparision Operators
 
+| Operator | Description                       |
+| -------- | --------------------------------- |
+| `==`     | equal to                          |
+| `===`    | equal value and equal type        |
+| `!=`     | not equal                         |
+| `!==`    | not equal value or not equal type |
+| `<`      | less than                         |
+| `>`      | greater than                      |
+| `<=`     | less than or equal to             |
+| `>=`     | greater than or equal to          |
+
 - number এর সাথে boolean compare করলে `true = 1` and `false = 0` হয়ে যায়।
 
 ```javascript
