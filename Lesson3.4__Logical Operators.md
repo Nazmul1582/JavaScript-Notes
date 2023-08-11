@@ -22,18 +22,19 @@ false && true  // result (0x1 = 0)  => true
 false && false  // result (0x0 = 0) => false
 ```
 
+```javascript
+let a = false;
+console.log(!a); // true;
+```
+
 ### use of logical operators
 
 ```javascript
 let a = 8,
   b = 7,
-  c =
-    0(a == c) ||
-    (c > a)(
-      // result => false
-      a !== c
-    ) ||
-    c < a; // result => true
+  c = 0;
+a == c || c > a; // result => false
+a !== c || c < a; // result => true
 !(a == c) || c < a; // result => true   => (!false || true => true || true => true)
 
 let d = true;
