@@ -1,17 +1,16 @@
-# Bitwise, String, Conditional(ternary), Unary, Commma and Relational Operators
+# Bitwise Operators
 
-## String Operator
+| Operator | Description          |
+| -------- | -------------------- |
+| `&`      | AND                  |
+| `        | ` OR                 |
+| `~`      | NOT                  |
+| `^`      | XOR                  |
+| `<<`     | left shift           |
+| `>>`     | right shift          |
+| `>>>`    | unsigned right shift |
 
-String Operator / String concatination: String কে plus(`+`) দিয়ে যোগ করা।
-
-```javascript
-console.log("Nazmul" + " " + "Hasan"); // Nazmul Hasan
-let x = 5 + 5; // 10
-let y = "5" + 5; // 55
-let z = "Hello" + 5; // Hello5
-```
-
-## Bitwise Operators
+Note:- Bitwise OR is `|`
 
 বাইনারির প্রত্যেকটা digit কে বলা হয় bit
 computer storage এর সবচেয়ে single unit হচ্ছে bit
