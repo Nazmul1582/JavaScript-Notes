@@ -1,3 +1,14 @@
+### Table of Contents
+
+- [JavaScript Variables](#javascript-variables)
+
+  - [variable declaration](#variable-declaration)
+    - [Right way for variable declaration](#right-way-for-variable-declaration)
+  - [Loosely-typed Variables](#loosely-typed-variables)
+  - [Variable Scope](#variable-scope)
+  - [var let and const](#var-let-and-const)
+    - [difference between var, let & const](#difference-between-var-let--const)
+
 # JavaScript Variables
 
 - variables are containers for storing data.
@@ -23,6 +34,22 @@ There are 3 ways to declare a JavaScript variable
 3. const
 
 **let and const are block scope**
+
+### variable summary
+
+variable লিখতে ৫টি জিনিস লাগে।
+
+1. var/let/const
+2. ভ্যারিয়েবলের নাম
+3. =
+4. value
+5. ; (সেমিকোলন)
+
+```Javascript
+var price = 15;
+```
+
+variable লিখতে যেগুলো ইউজ করা যাবে না: Reserved Keywords, শুরুতে Number অথবা Special Character (তবে $ এবং \_ দিয়ে শুরু করা যাবে), ‍Space
 
 ### variable declaration
 
@@ -133,7 +160,7 @@ console.log(msg); //error: can't access local variable
 | 1. Stored in global scope | ✔   | ❌  | ❌    |
 | 2. Function scope         | ✔   | ✔   | ✔     |
 | 3. Block scope            | ❌  | ✔   | ✔     |
-| 5. Can be reassigned?     | ✔   | ✔   |   ❌    |
+| 5. Can be reassigned?     | ✔   | ✔   | ❌    |
 | 6. Can be redeclared?     | ✔   | ❌  | ❌    |
 | 7. Can be hoistted?       | ✔   | ❌  | ❌    |
 
