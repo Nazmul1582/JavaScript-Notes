@@ -1,6 +1,6 @@
 ### Table of content
 
--[typeof](#typeof) -[instanceof](#instanceof) -[delete](#delete) -[in](#in) -[Unary](#unary)
+-[typeof](#typeof) -[instanceof](#instanceof) -[delete](#delete) -[in](#in) -[Unary](#unary) -[comma](#comma)
 
 # Few Important JavaScript Operators
 
@@ -186,4 +186,18 @@ console.log(+true); // Expected output: 1
 console.log(+false); // Expected output: 0
 
 console.log(+"hello"); // Expected output: NaN
+```
+
+## comma
+
+The comma operator (,) evaluates both of its operands and returns the value of the last operand. This operator is primarily used inside a for loop, to allow multiple variables to be updated each time through the loop.
+
+```javascript
+let a = 5;
+let b = 4;
+console.log("result = ", a + b);
+
+for (let a = 0, b = 5; a <= 5; a++, b--) {
+  console.log(a, b);
+}
 ```
