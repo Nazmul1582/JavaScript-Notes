@@ -1,6 +1,6 @@
 ### Table of content
 
--[typeof](#typeof) -[instanceof](#instanceof) -[delete](#delete)
+-[typeof](#typeof) -[instanceof](#instanceof) -[delete](#delete) -[in](#in)
 
 # Few Important JavaScript Operators
 
@@ -125,4 +125,44 @@ console.log(delete toDelete);
 
 // toDelete is not defined
 console.log(toDelete);
+```
+
+## in
+
+The in operator returns true if the specified property is in the specified object. The syntax is:
+
+```javascript
+propNameOrNumber in objectName;
+```
+
+- true: The value true is returned if the specified property is found in an object.
+- false: The value false is returned if the specified property is not found in an object.
+
+```javascript
+const fruits = ["Apple", "Banana", "Mango"];
+// you must specify the index number, not the value at that index
+
+// Output of the indexed number
+console.log(2 in fruits); // true
+
+// Output of the Value
+console.log("Banana" in fruits); // false;
+
+// output of the Array property
+console.log("length" in fruits); // true
+```
+
+```javascript
+// built-in objects
+"PI" in Math; // returns true
+
+const str = new String("Hello");
+"length" in str; // true
+```
+
+```javascript
+// Custom object
+const player = { name: "Sakib", age: 35 };
+"name" in player; // true
+"profession" in player; // false
 ```
