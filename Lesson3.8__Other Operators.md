@@ -1,6 +1,6 @@
 ### Table of content
 
--[typeof](#typeof) -[instanceof](#instanceof) -[delete](#delete) -[in](#in)
+-[typeof](#typeof) -[instanceof](#instanceof) -[delete](#delete) -[in](#in) -[Unary](#unary)
 
 # Few Important JavaScript Operators
 
@@ -165,4 +165,25 @@ const str = new String("Hello");
 const player = { name: "Sakib", age: 35 };
 "name" in player; // true
 "profession" in player; // false
+```
+
+## Unary
+
+```javascript
+const x = 1;
+const y = -1;
+
+console.log(+x); // Expected output: 1
+
+console.log(+y); // Expected output: -1
+
+console.log(-y); // Expected output: 1
+
+console.log(+""); // Expected output: 0
+
+console.log(+true); // Expected output: 1
+
+console.log(+false); // Expected output: 0
+
+console.log(+"hello"); // Expected output: NaN
 ```
