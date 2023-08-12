@@ -1,6 +1,6 @@
 ### Table of content
 
--[typeof](#typeof) -[instanceof](#instanceof) -[delete](#delete) -[in](#in) -[Unary](#unary) -[comma](#comma)
+-[typeof](#typeof) -[instanceof](#instanceof) -[delete](#delete) -[in](#in) -[Unary](#unary) -[comma](#comma) -[Grouping](#grouping)
 
 # Few Important JavaScript Operators
 
@@ -200,4 +200,21 @@ console.log("result = ", a + b);
 for (let a = 0, b = 5; a <= 5; a++, b--) {
   console.log(a, b);
 }
+```
+
+## Grouping
+
+The grouping operator ( ) controls the precedence of evaluation in expressions. For example, you can override multiplication and division first, then addition and subtraction to evaluate addition first.
+
+```javascript
+const a = 1;
+const b = 2;
+const c = 3;
+
+// default precedence
+console.log(a + b * c); // 7
+
+// now overriding precedence
+// addition before multiplication
+console.log((a + b) * c); // 9
 ```
