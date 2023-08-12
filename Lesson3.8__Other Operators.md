@@ -1,6 +1,6 @@
 ### Table of content
 
--[typeof](#typeof) -[instanceof](#instanceof)
+-[typeof](#typeof) -[instanceof](#instanceof) -[delete](#delete)
 
 # Few Important JavaScript Operators
 
@@ -78,4 +78,51 @@ console.log(str instanceof String); // true
 
 let num = new Number("10");
 console.log(num instanceof Number); // false
+```
+
+## delete
+
+The delete operator deletes an object's property. The syntax is:
+
+```javascript
+delete object.property;
+delete object[propertyKey];
+delete objectName[index];
+```
+
+```javascript
+delete Math.PI; // returns false (cannot delete non-configurable properties)
+
+const myObj = { h: 4 };
+delete myObj.h; // returns true (can delete user-defined properties)
+```
+
+```javascript
+const person = { name: "Sakib", age: 35 };
+delete person.age; // true
+console.log(person); // {name: "Sakib"}
+```
+
+the delete operator doesn’t work for variables or function, it returns false and the actual variables and functions remain untouched.
+
+```javascript
+let num = 5;
+console.log(delete num); //false
+
+let sum = (a, b) => {
+  return a + b;
+};
+console.log(delete sum); //false
+```
+
+Exception: Global variables can be removed using the delete operator. Because the global variables are properties of the window object and as delete works on objects, it’ll delete the variable.
+
+```javascript
+Example: toDelete = 5;
+
+// true
+console.log(delete toDelete);
+
+// toDelete is not defined
+console.log(toDelete);
 ```
