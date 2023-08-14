@@ -1,6 +1,6 @@
 ### Table of content
 
--[typeof](#typeof) -[instanceof](#instanceof) -[delete](#delete) -[in](#in) -[Unary](#unary) -[comma](#comma) -[Grouping](#grouping)
+-[typeof](#typeof) -[instanceof](#instanceof) -[delete](#delete) -[in](#in) -[Unary](#unary) -[comma](#comma) -[Grouping](#grouping) -[Short Circuiting](#short-circuiting) -[Nullish Coalescing](#nullish-coalescing)
 
 # Few Important JavaScript Operators
 
@@ -218,3 +218,7 @@ console.log(a + b * c); // 7
 // addition before multiplication
 console.log((a + b) * c); // 9
 ```
+
+## Short Circuiting
+
+## Nullish Coalescing
